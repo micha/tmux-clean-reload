@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tmux-clean-reload"
+version = "0.1.0"
+description = "Reset tmux prefix bindings to defaults and reload configuration safely"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Environment :: Console",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+tmux-clean-reload = "tmux_clean_reload.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
